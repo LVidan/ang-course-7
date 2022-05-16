@@ -1,0 +1,12 @@
+<div class="crd" #userProfile>
+  <div class="crd__id">
+    <h5>User ID: {{ user.id }}</h5>
+  </div>
+  <div class="crd__cnt mb-3">
+    <h5>User first name: {{ user.firstName }}</h5>
+    <h5>User last name: {{ user.lastName }}</h5>
+  </div>
+  <button class="btn btn-primary" (click)="checkUser()">Show User Name</button>
+
+  <h1>{{ clickedUser }}</h1>
+</div>
