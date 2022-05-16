@@ -1,27 +1,11 @@
-# AngularDomaci7
+### Zadatak
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+2 komponente - all-users i user.
+UserComponent: Plavi blok sa informacijama o jednom korisniku. Iz roditeljske komponente očekuje konkretnog korisnika na osnovu kojih će prikazati podatke.
+AllUsersComponent: Sadrži niz korisnika, gde svaki korisnik ima id, ime i prezime.
 
-## Development server
+Dvoklikom na usera (user component), obavestiti parent komponentu na kojeg usera je kliknuto. U parent (all users) komponenti, ispod svih blokova prikazati ime usera na kojeg je poslednje kliknuto. Ukoliko je već prikazano njegovo ime, potrebno je prikazati slash. Ukoliko je trenutno prikazan slash, a pre prikazivanja slasha je bio taj isti user na kojeg je opet kliknuto i dalje treba da stoji slash.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Primer: Klik 2x na usera 1, prikaz User1. Opet se klikne na usera 1 prikaz slasha. Ako se opet klikne na usera 1 i dalje treba biti prikazan slash, dakle dokle god se ne klikne na novog - kao na snimku.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://user-images.githubusercontent.com/38792171/168678585-482720e4-3f03-43c2-8d16-edc53efe27bb.mp4
