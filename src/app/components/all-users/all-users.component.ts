@@ -30,5 +30,16 @@ export class AllUsersComponent implements OnInit {
     }
   ];
 
-  clickedUser: string = 'Alo';
+  clickedUser: any;
+  userFirstName: string;
+
+  userData(event: any): void {
+    if (event.id === this.clickedUser?.id) {
+      this.userFirstName = '/';
+    } else {
+      this.userFirstName = event.firstName;
+    }
+
+    this.clickedUser = event;
+  }
 }

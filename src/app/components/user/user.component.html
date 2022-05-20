@@ -6,7 +6,5 @@
     <h5>User first name: {{ user.firstName }}</h5>
     <h5>User last name: {{ user.lastName }}</h5>
   </div>
-  <button class="btn btn-primary" (click)="checkUser()">Show User Name</button>
-
-  <h1>{{ clickedUser }}</h1>
+  <button class="btn btn-primary" (dblclick)="getUser(user)">Show User Name</button>
 </div>

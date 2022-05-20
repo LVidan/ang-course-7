@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -10,23 +10,13 @@ export class UserComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.user);
   }
 
   @Input() user: any;
-  clickedUser: string;
+  @Output() userClicked: EventEmitter<any> = new EventEmitter();
 
 
-  checkUser(): void {
-    console.log(this.user.firstName);
-    // this.clickedUser = this.user.firstName;
-
-    // if (this.clickedUser === this.user.firstName) {
-    //   this.clickedUser = "/";
-    // } else if (this.clickedUser === "/") {
-    //   console.log('VEC SI STISNUO NA TO IME');
-    // } else {
-    //   this.clickedUser = this.user.firstName;
-    // }
+  getUser(user: any): void {
+    this.userClicked.emit(user);
   }
 }
